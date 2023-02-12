@@ -59,7 +59,7 @@ public sealed class AcceptedAtRoute<TValue> : IResult, IEndpointMetadataProvider
     {
         Value = value;
         RouteName = routeName;
-        RouteValues = routeValues;
+        RouteValues = routeValues ?? new RouteValueDictionary();
         HttpResultsHelper.ApplyProblemDetailsDefaultsIfNeeded(Value, StatusCode);
     }
 

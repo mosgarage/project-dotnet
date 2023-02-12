@@ -53,7 +53,7 @@ public sealed class AcceptedAtRoute : IResult, IEndpointMetadataProvider, IStatu
         RouteValueDictionary routeValues)
     {
         RouteName = routeName;
-        RouteValues = routeValues;
+        RouteValues = routeValues ?? new RouteValueDictionary();
     }
 
     /// <summary>

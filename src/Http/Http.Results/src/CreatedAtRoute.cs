@@ -53,7 +53,7 @@ public sealed class CreatedAtRoute : IResult, IEndpointMetadataProvider, IStatus
         RouteValueDictionary routeValues)
     {
         RouteName = routeName;
-        RouteValues = routeValues;
+        RouteValues = routeValues ?? new RouteValueDictionary();
     }
 
     /// <summary>
