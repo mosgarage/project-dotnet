@@ -1289,6 +1289,19 @@ public partial class TypedResultsTests
     }
 
     [Fact]
+    public void RedirectToRoute_WithNullRouteNameAndRouteValues_ResultHasCorrectValues()
+    {
+        // Arrange
+
+        // Act
+        var result = TypedResults.RedirectToRoute(null, null);
+
+        // Assert
+        Assert.Null(result.RouteName);
+        Assert.Equal(new RouteValueDictionary(), result.RouteValues);
+    }
+
+    [Fact]
     public void StatusCode_ResultHasCorrectValues()
     {
         // Arrange
