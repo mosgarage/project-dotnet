@@ -50,7 +50,7 @@ public sealed class AcceptedAtRoute : IResult, IEndpointMetadataProvider, IStatu
     /// <param name="routeValues">The route data to use for generating the URL.</param>
     internal AcceptedAtRoute(
         string? routeName,
-        RouteValueDictionary routeValues)
+        RouteValueDictionary? routeValues)
     {
         RouteName = routeName;
         RouteValues = routeValues ?? new RouteValueDictionary();

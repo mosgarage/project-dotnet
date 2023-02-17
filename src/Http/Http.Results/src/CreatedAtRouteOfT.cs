@@ -54,7 +54,7 @@ public sealed class CreatedAtRoute<TValue> : IResult, IEndpointMetadataProvider,
     /// <param name="value">The value to format in the entity body.</param>
     internal CreatedAtRoute(
         string? routeName,
-        RouteValueDictionary routeValues,
+        RouteValueDictionary? routeValues,
         TValue? value)
     {
         Value = value;

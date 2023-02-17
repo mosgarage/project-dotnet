@@ -827,7 +827,7 @@ public static partial class Results
     /// <param name="value">The value to be included in the HTTP response body.</param>
     /// <returns>The created <see cref="IResult"/> for the response.</returns>
 #pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
-    public static IResult CreatedAtRoute(string? routeName, RouteValueDictionary routeValues, object? value = null)
+    public static IResult CreatedAtRoute(string? routeName, RouteValueDictionary? routeValues, object? value = null)
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         => CreatedAtRoute<object>(routeName, routeValues, value);
 
@@ -850,7 +850,7 @@ public static partial class Results
     /// <param name="value">The value to be included in the HTTP response body.</param>
     /// <returns>The created <see cref="IResult"/> for the response.</returns>
 #pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
-    public static IResult CreatedAtRoute<TValue>(string? routeName, RouteValueDictionary routeValues, TValue? value = default)
+    public static IResult CreatedAtRoute<TValue>(string? routeName, RouteValueDictionary? routeValues, TValue? value = default)
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         => value is null ? TypedResults.CreatedAtRoute(routeName, routeValues) : TypedResults.CreatedAtRoute(value, routeName, routeValues);
 
@@ -891,7 +891,7 @@ public static partial class Results
     /// <param name="value">The optional content value to format in the response body.</param>
     /// <returns>The created <see cref="IResult"/> for the response.</returns>
 #pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
-    public static IResult AcceptedAtRoute(string? routeName, RouteValueDictionary routeValues, object? value = null)
+    public static IResult AcceptedAtRoute(string? routeName, RouteValueDictionary? routeValues, object? value = null)
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         => AcceptedAtRoute<object>(routeName, routeValues, value);
 
@@ -914,7 +914,7 @@ public static partial class Results
     /// <param name="value">The optional content value to format in the response body.</param>
     /// <returns>The created <see cref="IResult"/> for the response.</returns>
 #pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
-    public static IResult AcceptedAtRoute<TValue>(string? routeName, RouteValueDictionary routeValues, TValue? value = default)
+    public static IResult AcceptedAtRoute<TValue>(string? routeName, RouteValueDictionary? routeValues, TValue? value = default)
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         => value is null ? TypedResults.AcceptedAtRoute(routeName, routeValues) : TypedResults.AcceptedAtRoute(value, routeName, routeValues);
 

@@ -906,7 +906,7 @@ public static class TypedResults
     /// <param name="routeName">The name of the route to use for generating the URL.</param>
     /// <param name="routeValues">The route data to use for generating the URL.</param>
     /// <returns>The created <see cref="HttpResults.CreatedAtRoute"/> for the response.</returns>
-    public static CreatedAtRoute CreatedAtRoute(string? routeName, RouteValueDictionary routeValues)
+    public static CreatedAtRoute CreatedAtRoute(string? routeName, RouteValueDictionary? routeValues)
         => new(routeName, routeValues);
 
     /// <summary>
@@ -931,7 +931,7 @@ public static class TypedResults
     /// <param name="routeValues">The route data to use for generating the URL.</param>
     /// <param name="value">The value to be included in the HTTP response body.</param>
     /// <returns>The created <see cref="HttpResults.CreatedAtRoute{TValue}"/> for the response.</returns>
-    public static CreatedAtRoute<TValue> CreatedAtRoute<TValue>(TValue? value, string? routeName, RouteValueDictionary routeValues)
+    public static CreatedAtRoute<TValue> CreatedAtRoute<TValue>(TValue? value, string? routeName, RouteValueDictionary? routeValues)
         => new(routeName, routeValues, value);
 
     /// <summary>
@@ -996,7 +996,7 @@ public static class TypedResults
     /// <param name="routeName">The name of the route to use for generating the URL.</param>
     /// <param name="routeValues">The route data to use for generating the URL.</param>
     /// <returns>The created <see cref="HttpResults.AcceptedAtRoute"/> for the response.</returns>
-    public static AcceptedAtRoute AcceptedAtRoute(string? routeName, RouteValueDictionary routeValues)
+    public static AcceptedAtRoute AcceptedAtRoute(string? routeName, RouteValueDictionary? routeValues)
         => new(routeName, routeValues);
 
     /// <summary>
@@ -1021,7 +1021,7 @@ public static class TypedResults
     /// <param name="routeValues">The route data to use for generating the URL.</param>
     /// <param name="value">The value to be included in the HTTP response body.</param>
     /// <returns>The created <see cref="HttpResults.AcceptedAtRoute{TValue}"/> for the response.</returns>
-    public static AcceptedAtRoute<TValue> AcceptedAtRoute<TValue>(TValue? value, string? routeName, RouteValueDictionary routeValues)
+    public static AcceptedAtRoute<TValue> AcceptedAtRoute<TValue>(TValue? value, string? routeName, RouteValueDictionary? routeValues)
         => new(routeName, routeValues, value);
 
     /// <summary>
